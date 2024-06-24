@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>
+            Excel uploader
+        </title>
+         <style>
+            .center-div {
+                border:2px red solid;
+                padding:60px;
+                text-align: center;
+                padding: 60px;
+                box-sizing: border-box;
+                border: 2px solid red;
+                background-color: #f0f0f0;
+                margin-left: 300px;
+                margin-right: 300px;
+            }
+
+            #name{
+                background-color: #e0f7fa;
+                width:340px;
+                height:50px;
+            }
+
+            #excel_file{
+                background-color: #e0f7fa;
+                width:240px;
+                height:50px;
+            }
+            button{
+                background-color: #e0f7fa;
+                width:140px;
+                height:70px;
+            }
+         </style>
+    
+        
+    </head>
+    <body>
+        <h1>
+            Wellcome to Excel uploader
+
+        </h1>    
+        <div class="center-div">
+
+        <h1>Upload Excel File</h1>
+    
+        <br><br>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+        
+            <input type="text" id="name" name="name" placeholder="Enter your name" >
+            <br><br>
+            {% comment %} <label for="excel_file">Select Excel File:</label> {% endcomment %}
+            <input type="file" id="excel_file" name="excel_file">
+            <br><br>
+            <button type="submit"><h2>Upload</h3></button>
+        </form>
+
+    </div>
+
+    
+
+</body>
+</html>
